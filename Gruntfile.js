@@ -104,10 +104,20 @@ module.exports = function (grunt) {
         });
 
         grunt.config(['copy', bRule], {
-            filter: 'isFile',flatten:true,expand: true,
-            dest: 'dist/' + bRule + '/i18n',
-            src: 'src/models/' + bRule + '/locales/*'
-        });
+                files: [
+                    {
+                        filter: 'isFile', flatten: true, expand: true,
+                        dest: 'dist/' + bRule + '/i18n',
+                        src: ['src/models/' + bRule + '/locales/*']
+                    },
+                    {
+                        filter: 'isFile', flatten: true, expand: true,
+                        dest: 'dist/' + bRule,
+                        src: ['src/models/' + bRule + '/README.md' ]
+                    }
+                ]
+            }
+        );
 
 
 //        grunt.config(['uglify', bRule], {
