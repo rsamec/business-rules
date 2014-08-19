@@ -1,0 +1,37 @@
+{
+  "name": "business-rules",
+  "main": "README.md",
+  "version": "1.0.0.",
+  "homepage": "https://github.com/rsamec/business-rules",
+  "authors": [
+    "rsamec <roman.samec2@gmail.com>"
+  ],
+  "description": "business rules models",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "business",
+    "rules",
+    "validation",
+    "form"
+  ],
+  "dependencies": {
+      "underscore": "~1.6.0",
+      "q": "~2.0.0",
+      "moment":"latest",
+      "form":"latest"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "typings",
+    "src",
+    "docs",
+    "GruntFile.js"
+  ]
+}
