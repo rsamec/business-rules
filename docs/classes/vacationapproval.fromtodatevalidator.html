@@ -1,0 +1,718 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FromToDateValidator | Business rules</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="tsd-page-toolbar">
+        <div class="container">
+            <div id="tsd-filter">
+                <input type="checkbox" id="tsd-filter-inherited" checked />
+                <label for="tsd-filter-inherited">Inherited</label>
+
+                <input type="checkbox" id="tsd-filter-private" checked />
+                <label for="tsd-filter-private">Private</label>
+
+                <input type="checkbox" id="tsd-filter-only-exported" />
+                <label for="tsd-filter-only-exported">Only exported</label>
+            </div>
+
+            <a href="../index.html">Business rules</a>
+        </div>
+    </div>
+    <div class="tsd-page-title">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+    
+    
+    <li>
+        <a href="../modules/vacationapproval.html">VacationApproval</a>
+    </li>
+
+    <li>
+        <a href="vacationapproval.fromtodatevalidator.html">FromToDateValidator</a>
+    </li>
+
+            </ul>
+            <h1>Class FromToDateValidator</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container container-main">
+    <div class="row">
+        <div class="col-8">
+            
+    
+    <p> It validates passed date against constant from and to interval.
+ You can check that passed date is greater than now and lower than one year for now.</p>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="tsd-member-index">
+    <h2>Index</h2>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Properties</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#from" class="tsd-kind-icon">From</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#fromoperator" class="tsd-kind-icon">FromOperator</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#ignoretime" class="tsd-kind-icon">IgnoreTime</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#to" class="tsd-kind-icon">To</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#tooperator" class="tsd-kind-icon">ToOperator</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#tagname" class="tsd-kind-icon">tagName</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#custommessage" class="tsd-kind-icon">customMessage</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="vacationapproval.fromtodatevalidator.html#isacceptable" class="tsd-kind-icon">isAcceptable</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="vacationapproval.fromtodatevalidator.html#isvalid" class="tsd-kind-icon">isValid</a></li>
+                
+            </ul>
+        </section>
+    
+</section>
+    
+    
+        <section class="tsd-member-group ">
+    <h2>Properties</h2>
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="from"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> From<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Date</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:110</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The datetime against the compare is done.
+If From is not set, then comparison is done against actual datetime.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="fromoperator"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> FromOperator<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Validation.CompareOperator</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:99</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Set the time of compare between passed date and From date.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="ignoretime"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> IgnoreTime<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:94</li>
+            
+        </ul>
+    
+</aside>
+
+    <p> Ignore time part of date when compare dates.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="to"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> To<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Date</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:115</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The datetime against the compare is done.
+If From is not set, then comparison is done against actual datetime.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="tooperator"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> ToOperator<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Validation.CompareOperator</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:104</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Set the time of compare between passed date and From date.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="tagname"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> tagName<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:89</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+    
+        <section class="tsd-member-group ">
+    <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="custommessage"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> customMessage<span class="tsd-signature-symbols">(</span>config<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, args<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:65</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>It formats error message.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>config: <span class="tsd-signature-type">any</span></h5>
+                
+    <p>localization strings</p>
+
+
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>args: <span class="tsd-signature-type">any</span></h5>
+                
+    <p>dynamic parameters</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>error message</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="isacceptable"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isAcceptable<span class="tsd-signature-symbols">(</span>s<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:14</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>s: <span class="tsd-signature-type">any</span></h5>
+                
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="isvalid"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> isValid<span class="tsd-signature-symbols">(</span>now<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, then<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, compareOperator<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Validation.CompareOperator</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in vacationApproval/FromToDateValidator.ts:30</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>now: <span class="tsd-signature-type">any</span></h5>
+                
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>then: <span class="tsd-signature-type">any</span></h5>
+                
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>compareOperator: <span class="tsd-signature-type">Validation.CompareOperator</span></h5>
+                
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+
+        </div>
+        <div class="offset-1 col-3">
+            <nav class="tsd-navigation primary">
+                <ul>
+                    
+                        <li class=" ">
+    <a href="../globals.html"><em>Globals</em></a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/shared.html">Shared</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/invoice.html">Invoice</a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container">
+    <a href="../modules/vacationapproval.html">VacationApproval</a>
+    
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    
+</li>
+                    
+                </ul>
+            </nav>
+
+            <nav class="tsd-navigation secondary">
+                
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/vacationapproval.iapproval.html" class="tsd-kind-icon">IApproval</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/vacationapproval.iduration.html" class="tsd-kind-icon">IDuration</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/vacationapproval.iperson.html" class="tsd-kind-icon">IPerson</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/vacationapproval.ivacationapprovaldata.html" class="tsd-kind-icon">IVacationApprovalData</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/vacationapproval.ivacationdeputyservice.html" class="tsd-kind-icon">IVacationDeputyService</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="vacationapproval.businessrules.html" class="tsd-kind-icon">BusinessRules</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="vacationapproval.duration.html" class="tsd-kind-icon">Duration</a>
+                    
+                </li>
+            
+        
+            
+                <li class="current tsd-kind-class tsd-parent-kind-container">
+                    <a href="vacationapproval.fromtodatevalidator.html" class="tsd-kind-icon">FromToDateValidator</a>
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#from" class="tsd-kind-icon">From</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#fromoperator" class="tsd-kind-icon">FromOperator</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#ignoretime" class="tsd-kind-icon">IgnoreTime</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#to" class="tsd-kind-icon">To</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#tooperator" class="tsd-kind-icon">ToOperator</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#tagname" class="tsd-kind-icon">tagName</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#custommessage" class="tsd-kind-icon">customMessage</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="vacationapproval.fromtodatevalidator.html#isacceptable" class="tsd-kind-icon">isAcceptable</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+                    <a href="vacationapproval.fromtodatevalidator.html#isvalid" class="tsd-kind-icon">isValid</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="vacationapproval.isweekdayvalidator.html" class="tsd-kind-icon">IsWeekdayValidator</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                
+            </nav>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>
