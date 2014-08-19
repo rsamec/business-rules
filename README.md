@@ -6,9 +6,9 @@ Business rules repository
 This is repository of business rules.
 Business rules are defined with help of UI agnostic form validation engine [node-form](https://github.com/rsamec/form).
 
-+ API [https://github.com/rsamec/business-rules]
-+ Usage nodejs [https://github.com/rsamec/node-form-app]
-+ Usage angularjs [[https://github.com/rsamec/angular-form-app]
++ [API] (https://github.com/rsamec/business-rules)
++ [nodejs example] (https://github.com/rsamec/node-form-app)
++ [angularjs example] (https://github.com/rsamec/angular-form-app)
 
 ## Install
 

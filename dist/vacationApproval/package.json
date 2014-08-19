@@ -1,0 +1,31 @@
+{
+  "name": "br-vacation-approval",
+  "version": "1.0.2",
+  "description": "Vacation approval business rules",
+  "main": "node-business-rules.js",
+  "dependencies": {
+    "moment": "^2.7.0",
+    "moment-range": "^1.0.2",
+    "node-form": "^1.0.1",
+    "q": "^1.0.1",
+    "underscore": "^1.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsamec/business-rules"
+  },
+  "keywords": [
+    "business",
+    "rules",
+    "validation"
+  ],
+  "author": "rsamec",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsamec/business-rules/issues"
+  },
+  "homepage": "https://github.com/rsamec/business-rules"
+}
