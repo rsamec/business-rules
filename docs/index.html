@@ -43,6 +43,42 @@
         <div class="col-8">
             <h1 id="business-rules">business-rules</h1>
 <p>Business rules repository</p>
+<p>This is repository of business rules.
+Business rules are defined with help of UI agnostic form validation engine <a href="https://github.com/rsamec/form">node-form</a>.</p>
+<ul>
+<li>[API] (<a href="https://github.com/rsamec/business-rules">https://github.com/rsamec/business-rules</a>)</li>
+<li>[nodejs example] (<a href="https://github.com/rsamec/node-form-app">https://github.com/rsamec/node-form-app</a>)</li>
+<li>[angularjs example] (<a href="https://github.com/rsamec/angular-form-app">https://github.com/rsamec/angular-form-app</a>)</li>
+</ul>
+<h2 id="install">Install</h2>
+<p>To install and run example</p>
+<pre><code class="lang-bash">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/rsamec/business-rules
+npm install
+tsd <span class="hljs-keyword">update</span>
+</code></pre>
+<p>To build business rules - select business rules you want</p>
+<pre><code class="lang-bash">grunt dist-vacationApproval
+grunt dist-invoice
+<span class="hljs-keyword">...</span>
+</code></pre>
+<p>To run tests</p>
+<pre><code class="lang-bash">grunt test-vacationApproval
+grunt test-invoice
+<span class="hljs-keyword">...</span>
+</code></pre>
+<p>All source code is written in typescript.
+To compile typescript</p>
+<pre><code class="lang-bash"><span class="hljs-comment">tsc</span> <span class="hljs-comment">models/vacationApproval/BusinessRules</span><span class="hljs-string">.</span><span class="hljs-comment">ts</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">t</span> <span class="hljs-comment">ES5</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">out</span> <span class="hljs-comment">business</span><span class="hljs-literal">-</span><span class="hljs-comment">rules</span><span class="hljs-string">.</span><span class="hljs-comment">js</span>
+<span class="hljs-comment">tsc</span> <span class="hljs-comment">models/invoice/BusinessRules</span><span class="hljs-string">.</span><span class="hljs-comment">ts</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">t</span> <span class="hljs-comment">ES5</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">out</span> <span class="hljs-comment">business</span><span class="hljs-literal">-</span><span class="hljs-comment">rules</span><span class="hljs-string">.</span><span class="hljs-comment">js</span>
+</code></pre>
+<h2 id="define-your-own-business-rules">Define your own business rules</h2>
+<ul>
+<li>find out descriptive name of your business rules</li>
+<li>use this name and create directory in src/models</li>
+<li>create Data.ts to define data structure for vacation approval</li>
+<li>crate BusinessRules.ts to define business rules</li>
+<li>add tests in directory in test/models</li>
+</ul>
 
         </div>
         <div class="offset-1 col-3">
