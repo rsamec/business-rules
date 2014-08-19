@@ -1,0 +1,47 @@
+{
+  "name": "node-form-app",
+  "version": "1.0.0",
+  "description": "Demo for form validation engine",
+  "main": "index.js",
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "i18n-2": "^0.4.6",
+    "mocha": "^1.21.3",
+    "moment": "^2.7.0",
+    "moment-range": "^1.0.2",
+    "node-form": "^1.0.1",
+    "q": "^1.0.1",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {
+    "grunt-complexity": "^0.2.0",
+    "grunt-contrib-commands": "^0.1.6",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-cli": "^1.9.0",
+    "grunt-typedoc": "^0.1.1",
+    "grunt-typescript": "^0.3.8",
+    "tsd": "^0.5.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsamec/node-form-app"
+  },
+  "keywords": [
+    "business",
+    "rules",
+    "validation"
+  ],
+  "author": "rsamec",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsamec/node-form-app/issues"
+  },
+  "homepage": "https://github.com/rsamec/node-form-app"
+}
