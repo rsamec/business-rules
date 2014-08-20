@@ -1,14 +1,14 @@
 {
   "name": "br-vacation-approval",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vacation approval business rules",
   "main": "node-business-rules.js",
   "dependencies": {
     "moment": "^2.7.0",
     "moment-range": "^1.0.2",
-    "node-form": "^1.0.1",
     "q": "^1.0.1",
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "business-rules-engine": "^1.0.20"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
