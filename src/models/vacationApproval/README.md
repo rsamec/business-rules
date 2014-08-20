@@ -26,7 +26,7 @@ Business rules for vacation approval. Vacation request validation rules:
 ```typescript
 import moment = require('moment');
 import _ = require('underscore');
-import Validation = require('node-form');
+import Validation = require('business-rules-engine');
 import VacationApproval = require('./models/vacationApproval/node-business-rules.js');
 
 //create test data

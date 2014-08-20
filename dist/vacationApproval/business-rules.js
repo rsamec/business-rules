@@ -1,7 +1,7 @@
 ///<reference path='../../../typings/moment/moment.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
-///<reference path='../../../typings/node-form/node-form.d.ts'/>
-///<reference path='../../../typings/node-form/Utils.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/Utils.d.ts'/>
 "use strict";
 var VacationApproval;
 (function (VacationApproval) {
@@ -87,7 +87,7 @@ var VacationApproval;
 "use strict";
 ///<reference path='../../../typings/moment/moment.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
-///<reference path='../../../typings/node-form/node-form.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 "use strict";
 var VacationApproval;
 (function (VacationApproval) {
@@ -113,8 +113,8 @@ var VacationApproval;
 })(VacationApproval || (VacationApproval = {}));
 ///<reference path='../../../typings/moment/moment.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
-///<reference path='../../../typings/node-form/node-form.d.ts'/>
-///<reference path='../../../typings/node-form/BasicValidators.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
 ///<reference path='FromToDateValidator.ts'/>
 ///<reference path='IsWeekdayValidator.ts'/>
 ///<reference path='Data.ts'/>
@@ -417,8 +417,8 @@ var VacationApproval;
 })(VacationApproval || (VacationApproval = {}));
 ///<reference path='../../../typings/moment/moment.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
-///<reference path='../../../typings/node-form/node-form.d.ts'/>
-///<reference path='../../../typings/node-form/BasicValidators.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
 ///<reference path='FromToDateValidator.ts'/>
 ///<reference path='Data.ts'/>
 ///<reference path='Duration.ts'/>
@@ -589,5 +589,5 @@ var VacationApproval;
 //var moment = require('moment-range');
 //var _ = require('underscore');
 //var Q = require('q');
-//var Validation = require('node-form');
+//var Validation = require('business-rules-engine');
 //module.exports = VacationApproval;

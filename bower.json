@@ -20,7 +20,7 @@
       "underscore": "~1.6.0",
       "q": "~2.0.0",
       "moment":"latest",
-      "form":"latest"
+      "business-rules-engine":"latest"
   },
   "license": "MIT",
   "ignore": [

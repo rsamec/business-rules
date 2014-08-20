@@ -1,9 +1,9 @@
 /// <reference path="../../typings/moment/moment.d.ts" />
 /// <reference path="../../typings/underscore/underscore.d.ts" />
-/// <reference path="../../typings/node-form/node-form.d.ts" />
-/// <reference path="../../typings/node-form/Utils.d.ts" />
-/// <reference path="../../typings/q/q.d.ts" />
-/// <reference path="../../typings/node-form/BasicValidators.d.ts" />
+/// <reference path="../../typings/business-rules-engine/business-rules-engine.d.ts" />
+/// <reference path="../../typings/business-rules-engine/Utils.d.ts" />
+/// <reference path="../../typings/q/Q.d.ts" />
+/// <reference path="../../typings/business-rules-engine/BasicValidators.d.ts" />
 declare module VacationApproval {
     /**
     *  It validates passed date against constant from and to interval.

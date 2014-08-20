@@ -5,8 +5,8 @@
 "use strict";
 ///<reference path='../../../typings/moment/moment.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
-///<reference path='../../../typings/node-form/node-form.d.ts'/>
-///<reference path='../../../typings/node-form/BasicValidators.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
 ///<reference path='Data.ts'/>
 "use strict";
 var Invoice;

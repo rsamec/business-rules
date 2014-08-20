@@ -4,12 +4,12 @@
   "description": "Business rules repository",
   "main": "README.md",
   "dependencies": {
+    "business-rules-engine": "^1.0.20",
     "expect.js": "^0.3.1",
     "i18n-2": "^0.4.6",
     "mocha": "^1.21.3",
     "moment": "^2.7.0",
     "moment-range": "^1.0.2",
-    "node-form": "^1.0.1",
     "q": "^1.0.1",
     "underscore": "^1.6.0"
   },

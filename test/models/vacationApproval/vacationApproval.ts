@@ -2,11 +2,11 @@
 ///<reference path='../../../typings/node/node.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
 ///<reference path='../../../typings/q/q.d.ts'/>
-///<reference path='../../../typings/node-form/node-form.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 
 ///<reference path='../../../dist/vacationApproval/business-rules.d.ts'/>
 
-import Validation = require('node-form');
+var Validation = require('business-rules-engine');
 var expect = require('expect.js');
 var _:UnderscoreStatic = require('underscore');
 import Q = require('q');

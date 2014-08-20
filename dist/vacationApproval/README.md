@@ -68,70 +68,59 @@ Please enter no more than 15 characters.
 Output of all business rules for vacation are under tests.
 
 ```bash
-   employee
-       first name + last name
-         √ fill no names
-         √ fill empty names
-         √ fill long names
-         √ fill some names
-     duration
-       from and to fields
-         √ fill no dates
-         √ fill empty dates
-         √ fill dates before today
-         √ fill dates qreater than one year from today
-         √ fill today
-         √ fill one year from today
-         √ fill weekend
-       duration in days
-         √ zero duration
-         √ negative duration
-         √ minimal duration
-         √ maximal duration 25 days (25 + 10 weekends)
-         √ too big duration 26 days (26 + 10 weekends)
-         √ too big duration 26 days (26 + 10 weekends)
-       excluded days are in duration range
-         √ is in of duration range
-         √ is one out of duration range
-         √ is more than one out of duration range
-     deputy
-       first name + last name
-         √ fill no names
-         √ fill empty names
-         √ fill long names
-         √ fill some names
-       email
-         √ fill no email
-         √ fill wrong email
-         √ fill some email
-     deputy check with list of all approved vacations that they are not in conflict
-       √ fill employee with vacation and confict in days (1022ms)
-       √ fill employee with vacation and confict in days (1025ms)
-     complex test
+  business rules for vacation approval
+    employee
+      first name + last name
+        √ fill no names
+        √ fill empty names
+        √ fill long names
+        √ fill some names
+    duration
+      from and to fields
+        √ fill no dates
+        √ fill empty dates
+        √ fill dates before today
+        √ fill dates qreater than one year from today
+        √ fill dates qreater than one year from today
+        √ fill today
+        √ fill one year from today
+      duration in days
+        √ zero duration
+        √ negative duration
+        √ minimal duration
+        √ maximal duration 25 days (25 + 10 weekends) (108ms)
+        √ too big duration 26 days (26 + 10 weekends) (103ms)
+      excluded days are in duration range
+        √ is in of duration range
+        √ is one out of duration range
+        √ is more than one out of duration range
+    deputy
+      first name + last name
+        √ fill no names
+        √ fill empty names
+        √ fill long names
+        √ fill some names
+      email
+        √ fill no email
+        √ fill wrong email
+        √ fill some email
+    deputy check with list of all approved vacations that they are not in conflict
+      √ fill employee with vacation and confict in days (1012ms)
+      √ fill employee with vacation and confict in days (1015ms)
+    complex test
 
-       √ fill all fields correctly (1027ms)
-     approved by
-       first name + last name
-         √ fill no names
-         √ fill empty names
-         √ fill long names
-         √ fill some names
-       approved date
-         √ approved before vacation starts - no error
-         √ approved after vacation starts - error
-         √ approved the same days as vacation starts - no error
+      √ fill all fields correctly (1013ms)
 
-   duration days
-     range days
-       √ the same days - return 1 day
-       √ positive range - number of days
-       √ negative range - zero day
-     vacation days - exclude weekends
-       √ positive range - one weekend
-       √ negative range - zero day
-       √ positive range - three weekends
-     vacation days - specific exclude - e.g. public holiday
-       √ within weekdays Wednesday, August 20th 2014
-       √ within weekends Saturday, August 23rd 2014
+  duration days
+    range days
+      √ the same days - return 1 day
+      √ positive range - number of days
+      √ negative range - zero day
+    vacation days - exclude weekends
+      √ positive range - one weekend
+      √ negative range - zero day
+      √ positive range - three weekends
+    vacation days - specific exclude - e.g. public holiday
+      √ within weekdays Wednesday, July 30th 2014
 
 ```
