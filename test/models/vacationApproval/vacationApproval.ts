@@ -596,6 +596,36 @@ describe('business rules for vacation approval', function () {
             }).done(null, done);
 
         });
+
+        it.only('fill no fields correctly', function (done) {
+            //when
+            data = {};
+
+            data.Employee = {
+                FirstName: "John",
+                LastName: "Smith toooooooooooooooooooooooooo long"
+            };
+            data.Duration = {
+                From :moment(new Date()).add({days:-1}).toDate(),
+                To : moment(new Date()).add({days:-10}).toDate()
+            };
+
+            businessRules = new VacationApproval.BusinessRules(data, new FakeVacationDeputyService());
+
+            //exec
+            var promiseResult = businessRules.Validate();
+
+            promiseResult.then(function (response) {
+
+                //verify
+                console.log(businessRules.Errors.ErrorMessage);
+                expect(businessRules.Errors.HasErrors).to.equal(true);
+
+                done();
+
+            }).done(null, done);
+
+        });
     });
 
     describe('approved by', function () {
