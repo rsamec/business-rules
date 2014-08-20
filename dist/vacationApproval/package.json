@@ -1,6 +1,6 @@
 {
   "name": "br-vacation-approval",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vacation approval business rules",
   "main": "node-business-rules.js",
   "dependencies": {
