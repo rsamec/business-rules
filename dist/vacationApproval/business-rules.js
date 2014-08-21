@@ -527,9 +527,9 @@ var VacationApproval;
 
             var personValidator = this.createPersonValidator();
             validator.ValidatorFor("Employee", personValidator);
+            validator.ValidatorFor("Approval", this.createApprovedByValidator());
             validator.ValidatorFor("Deputy1", personValidator);
             validator.ValidatorFor("Deputy2", personValidator);
-            validator.ValidatorFor("Approval", this.createApprovedByValidator());
 
             var durationValidator = this.Duration.createDurationValidator();
             validator.ValidatorFor("Duration", durationValidator);

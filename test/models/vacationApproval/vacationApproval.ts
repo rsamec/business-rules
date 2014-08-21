@@ -588,7 +588,7 @@ describe('business rules for vacation approval', function () {
             promiseResult.then(function (response) {
 
                 //verify
-                console.log(businessRules.Errors.ErrorMessage);
+                //console.log(businessRules.Errors.ErrorMessage);
                 expect(businessRules.Errors.HasErrors).to.equal(false);
 
                 done();
@@ -597,18 +597,9 @@ describe('business rules for vacation approval', function () {
 
         });
 
-        it.only('fill no fields correctly', function (done) {
+        it('fill no fields correctly', function (done) {
             //when
             data = {};
-
-            data.Employee = {
-                FirstName: "John",
-                LastName: "Smith toooooooooooooooooooooooooo long"
-            };
-            data.Duration = {
-                From :moment(new Date()).add({days:-1}).toDate(),
-                To : moment(new Date()).add({days:-10}).toDate()
-            };
 
             businessRules = new VacationApproval.BusinessRules(data, new FakeVacationDeputyService());
 
@@ -618,7 +609,7 @@ describe('business rules for vacation approval', function () {
             promiseResult.then(function (response) {
 
                 //verify
-                console.log(businessRules.Errors.ErrorMessage);
+                //console.log(businessRules.Errors.ErrorMessage);
                 expect(businessRules.Errors.HasErrors).to.equal(true);
 
                 done();

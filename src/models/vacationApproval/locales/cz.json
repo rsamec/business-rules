@@ -27,10 +27,7 @@
 	"NoErrors": "Neexistují žádné chyby.",
 	"Errors": "Chyby",
 	"DAYS_TEXT": "den(dnů)",
-	"Approval": "Schválení",
-	"ApprovedBy": "Schváleno kým",
-	"Approved": "Schváleno",
-	"ApprovedDate": "Datum schválení",
+
 	"required": "Tento údaj je povinný.",
 	"remote": "Prosím, opravte tento údaj.",
 	"email": "Prosím, zadejte platný e-mail.",
@@ -58,5 +55,12 @@
 		"GreaterThanEqual": "Prosím, zadejte datum větší nebo rovné {CompareTo}.",
 		"GreaterThan": "Prosím, zadejte datum větší než {CompareTo}."
 	},
-	"Approval.ApprovedBy": "Approval.ApprovedBy"
+
+    "Approval": "Schválení",
+    "ApprovedBy": "Manager",
+    "Approved": "Schváleno",
+    "ApprovedDate": "Datum schválení",
+
+    "Manager":"Manager",
+    "DeputyIsManager": "Zástupce je schodný s manažerem"
 }
