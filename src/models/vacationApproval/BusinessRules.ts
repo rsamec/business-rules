@@ -100,6 +100,10 @@ module VacationApproval {
 //                return this.Deputy1 == undefined || !this.Deputy1.Checked
 //            }.bind(this.Data));
 
+            this.Deputy1Validator.SetOptional(function () {
+                return this.Approval == undefined || this.Approval.ApprovedBy.Checked
+            }.bind(this.Data))
+
 
             this.Deputy2Validator.SetOptional(function () {
                 return this.Deputy2 == undefined || !this.Deputy2.Checked
@@ -182,7 +186,6 @@ module VacationApproval {
             validator.ValidatorFor("Approval",this.createApprovedByValidator());
             validator.ValidatorFor("Deputy1", personValidator);
             validator.ValidatorFor("Deputy2", personValidator);
-
 
 
 
