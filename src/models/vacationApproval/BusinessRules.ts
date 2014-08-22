@@ -102,12 +102,12 @@ module VacationApproval {
 
             this.Deputy1Validator.SetOptional(function () {
                 return this.Approval == undefined || this.Approval.ApprovedBy.Checked
-            }.bind(this.Data))
+            }.bind(this.Data));
 
 
             this.Deputy2Validator.SetOptional(function () {
                 return this.Deputy2 == undefined || !this.Deputy2.Checked
-            }.bind(this.Data))
+            }.bind(this.Data));
 
 
             this.VacationApprovalErrors = this.VacationApprovalValidator.ValidationResult.Errors;

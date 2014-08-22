@@ -82,7 +82,7 @@ module.exports = function (grunt) {
         }
      });
 
-    var businessRules = ['vacationApproval', 'invoice'];
+    var businessRules = ['vacationApproval', 'invoice','hobbies'];
     for(var i = 0; i < businessRules.length; i++) {
         var bRule = businessRules[i];
         var destFile = 'dist/' + bRule + '/business-rules.js';
