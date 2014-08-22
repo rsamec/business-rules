@@ -13,6 +13,7 @@ import Q = require('q');
 var moment = require('moment');
 var Invoice = require('../../../dist/invoice/node-business-rules.js');
 
+
 describe('business rules for invoice', function () {
     //create test data
     var data;
