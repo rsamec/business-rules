@@ -1,4 +1,4 @@
-///<reference path='../../../typings/q/q.d.ts'/>
+///<reference path='../../../typings/q/Q.d.ts'/>
 "use strict";
 module VacationApproval {
 

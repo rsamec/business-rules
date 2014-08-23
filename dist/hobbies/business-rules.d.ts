@@ -2,6 +2,13 @@
 /// <reference path="../../typings/business-rules-engine/business-rules-engine.d.ts" />
 /// <reference path="../../typings/business-rules-engine/BasicValidators.d.ts" />
 declare module Shared {
+    interface IBusinessRules {
+        ValidationResult: Validation.IValidationResult;
+        Validate(): Q.Promise<Validation.IValidationResult>;
+        Name: string;
+    }
+}
+declare module Shared {
     /**
     * Company information data structure.
     */
@@ -124,8 +131,12 @@ declare module Hobbies {
     /**
     * Business rules for hobbies.
     **/
-    class BusinessRules {
+    class BusinessRules implements Shared.IBusinessRules {
         public Data: IHobbiesData;
+        /**
+        * Business rules name
+        */
+        public Name : string;
         /**
         * Hobbies number validator.
         */

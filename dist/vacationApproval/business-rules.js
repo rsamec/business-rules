@@ -1,3 +1,5 @@
+///<reference path='../../../typings/q/Q.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/moment/moment.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
@@ -83,7 +85,7 @@ var VacationApproval;
     })();
     VacationApproval.FromToDateValidator = FromToDateValidator;
 })(VacationApproval || (VacationApproval = {}));
-///<reference path='../../../typings/q/q.d.ts'/>
+///<reference path='../../../typings/q/Q.d.ts'/>
 "use strict";
 ///<reference path='../../../typings/moment/moment.d.ts'/>
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
@@ -419,6 +421,7 @@ var VacationApproval;
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
+///<reference path='../shared/BusinessRules.ts'/>
 ///<reference path='FromToDateValidator.ts'/>
 ///<reference path='Data.ts'/>
 ///<reference path='Duration.ts'/>
@@ -427,9 +430,6 @@ var VacationApproval;
 (function (VacationApproval) {
     /**
     * Business rules for vacation approval.
-    *
-    * @class
-    * @constructor
     **/
     var BusinessRules = (function () {
         function BusinessRules(Data, vacationDeputyService) {
@@ -468,6 +468,17 @@ var VacationApproval;
             this.VacationApprovalErrors = this.VacationApprovalValidator.ValidationResult.Errors;
             this.ValidationResult = this.VacationRequestValidator.ValidationResult;
         }
+        Object.defineProperty(BusinessRules.prototype, "Name", {
+            /**
+            * Business rules name
+            */
+            get: function () {
+                return "vacationApproval";
+            },
+            enumerable: true,
+            configurable: true
+        });
+
         Object.defineProperty(BusinessRules.prototype, "Errors", {
             /**
             * Return vacation request errors.

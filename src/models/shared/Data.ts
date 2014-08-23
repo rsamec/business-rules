@@ -2,6 +2,8 @@
 "use strict";
 module Shared {
 
+
+
     /**
      * Company information data structure.
      */

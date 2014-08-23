@@ -1,3 +1,5 @@
+///<reference path='../../../typings/q/Q.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/q/q.d.ts'/>
 "use strict";
 ///<reference path='../../../typings/q/q.d.ts'/>
@@ -21,8 +23,9 @@ var Hobbies;
 })(Hobbies || (Hobbies = {}));
 ///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
-///<reference path='Data.ts'/>
+///<reference path='../shared/BusinessRules.ts'/>
 ///<reference path='../shared/Data.ts'/>
+///<reference path='Data.ts'/>
 "use strict";
 var Hobbies;
 (function (Hobbies) {
@@ -41,6 +44,17 @@ var Hobbies;
             this.ValidationResult = this.MainValidator.ValidationResult;
             this.HobbiesNumberValidator = this.MainValidator.Validators["HobbiesCount"];
         }
+        Object.defineProperty(BusinessRules.prototype, "Name", {
+            /**
+            * Business rules name
+            */
+            get: function () {
+                return "hobbies";
+            },
+            enumerable: true,
+            configurable: true
+        });
+
         /**
         * Executes all business rules.
         */

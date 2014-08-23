@@ -1,14 +1,21 @@
 ///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
 
-///<reference path='Data.ts'/>
+///<reference path='../shared/BusinessRules.ts'/>
 ///<reference path='../shared/Data.ts'/>
+///<reference path='Data.ts'/>
+
 "use strict";
 module Hobbies {
     /**
      * Business rules for hobbies.
      **/
-    export class BusinessRules {
+    export class BusinessRules implements Shared.IBusinessRules{
+
+        /**
+         * Business rules name
+         */
+        public get Name():string  {return "hobbies";}
 
         /**
          * Hobbies number validator.

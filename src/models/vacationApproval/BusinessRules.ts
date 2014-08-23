@@ -4,19 +4,22 @@
 ///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
 
+///<reference path='../shared/BusinessRules.ts'/>
 ///<reference path='FromToDateValidator.ts'/>
 ///<reference path='Data.ts'/>
 ///<reference path='Duration.ts'/>
 "use strict";
-module VacationApproval {
+module VacationApproval{
+
     /**
      * Business rules for vacation approval.
-     *
-     * @class
-     * @constructor
      **/
-    export class BusinessRules {
+    export class BusinessRules  implements Shared.IBusinessRules {
 
+        /**
+         * Business rules name
+         */
+        public get Name():string  {return "vacationApproval";}
 
 
         /**

@@ -1,3 +1,5 @@
+///<reference path='../../../typings/q/Q.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/q/q.d.ts'/>
 "use strict";
 ///<reference path='../../../typings/q/q.d.ts'/>
@@ -7,6 +9,7 @@
 ///<reference path='../../../typings/underscore/underscore.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
 ///<reference path='../../../typings/business-rules-engine/BasicValidators.d.ts'/>
+///<reference path='../shared/BusinessRules.ts'/>
 ///<reference path='Data.ts'/>
 "use strict";
 var Invoice;
@@ -25,6 +28,17 @@ var Invoice;
 
             this.ValidationResult = this.InvoiceValidator.ValidationResult;
         }
+        Object.defineProperty(BusinessRules.prototype, "Name", {
+            /**
+            * Business rules name
+            */
+            get: function () {
+                return "invoice";
+            },
+            enumerable: true,
+            configurable: true
+        });
+
         /**
         * Executes all business rules.
         */

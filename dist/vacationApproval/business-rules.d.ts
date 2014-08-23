@@ -1,9 +1,16 @@
+/// <reference path="../../typings/q/Q.d.ts" />
+/// <reference path="../../typings/business-rules-engine/business-rules-engine.d.ts" />
 /// <reference path="../../typings/moment/moment.d.ts" />
 /// <reference path="../../typings/underscore/underscore.d.ts" />
-/// <reference path="../../typings/business-rules-engine/business-rules-engine.d.ts" />
 /// <reference path="../../typings/business-rules-engine/Utils.d.ts" />
-/// <reference path="../../typings/q/Q.d.ts" />
 /// <reference path="../../typings/business-rules-engine/BasicValidators.d.ts" />
+declare module Shared {
+    interface IBusinessRules {
+        ValidationResult: Validation.IValidationResult;
+        Validate(): Q.Promise<Validation.IValidationResult>;
+        Name: string;
+    }
+}
 declare module VacationApproval {
     /**
     *  It validates passed date against constant from and to interval.
@@ -198,13 +205,14 @@ declare module VacationApproval {
 declare module VacationApproval {
     /**
     * Business rules for vacation approval.
-    *
-    * @class
-    * @constructor
     **/
-    class BusinessRules {
+    class BusinessRules implements Shared.IBusinessRules {
         public Data: IVacationApprovalData;
         private vacationDeputyService;
+        /**
+        * Business rules name
+        */
+        public Name : string;
         /**
         * Business rules for employee requested the vacation.
         */

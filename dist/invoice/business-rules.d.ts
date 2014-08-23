@@ -1,10 +1,16 @@
 /// <reference path="../../typings/q/Q.d.ts" />
+/// <reference path="../../typings/business-rules-engine/business-rules-engine.d.ts" />
 /// <reference path="../../typings/moment/moment.d.ts" />
 /// <reference path="../../typings/underscore/underscore.d.ts" />
-/// <reference path="../../typings/business-rules-engine/business-rules-engine.d.ts" />
 /// <reference path="../../typings/business-rules-engine/BasicValidators.d.ts" />
 declare module Shared {
-
+    interface IBusinessRules {
+        ValidationResult: Validation.IValidationResult;
+        Validate(): Q.Promise<Validation.IValidationResult>;
+        Name: string;
+    }
+}
+declare module Shared {
     /**
     * Company information data structure.
     */
@@ -172,8 +178,12 @@ declare module Invoice {
     /**
     * Business rules for generic invoice.
     **/
-    class BusinessRules {
+    class BusinessRules implements Shared.IBusinessRules {
         public Data: IInvoiceData;
+        /**
+        * Business rules name
+        */
+        public Name : string;
         /**
         * All business rules for invoice.
         */
