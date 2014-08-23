@@ -63,9 +63,15 @@ module VacationApproval {
         public VacationApprovalValidator;
 
         /**
-         * Return vacation request erros.
+         * Return vacation request errors.
          */
-        public Errors;
+        public get Errors() {return this.ValidationResult;}
+
+
+        /**
+         * Return vacation request errors.
+         */
+        public ValidationResult:Validation.IValidationResult;
 
         /**
          * Return vacation approval errors.
@@ -111,7 +117,7 @@ module VacationApproval {
 
 
             this.VacationApprovalErrors = this.VacationApprovalValidator.ValidationResult.Errors;
-            this.Errors = this.VacationRequestValidator.ValidationResult;
+            this.ValidationResult = this.VacationRequestValidator.ValidationResult;
         }
 
 

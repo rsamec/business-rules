@@ -466,8 +466,19 @@ var VacationApproval;
             }.bind(this.Data));
 
             this.VacationApprovalErrors = this.VacationApprovalValidator.ValidationResult.Errors;
-            this.Errors = this.VacationRequestValidator.ValidationResult;
+            this.ValidationResult = this.VacationRequestValidator.ValidationResult;
         }
+        Object.defineProperty(BusinessRules.prototype, "Errors", {
+            /**
+            * Return vacation request errors.
+            */
+            get: function () {
+                return this.ValidationResult;
+            },
+            enumerable: true,
+            configurable: true
+        });
+
         /**
         * Executes all business rules for validation request.
         */

@@ -238,9 +238,13 @@ declare module VacationApproval {
         */
         public VacationApprovalValidator: any;
         /**
-        * Return vacation request erros.
+        * Return vacation request errors.
         */
-        public Errors: any;
+        public Errors : Validation.IValidationResult;
+        /**
+        * Return vacation request errors.
+        */
+        public ValidationResult: Validation.IValidationResult;
         /**
         * Return vacation approval errors.
         */

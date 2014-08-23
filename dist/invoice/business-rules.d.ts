@@ -4,6 +4,7 @@
 /// <reference path="../../typings/business-rules-engine/business-rules-engine.d.ts" />
 /// <reference path="../../typings/business-rules-engine/BasicValidators.d.ts" />
 declare module Shared {
+
     /**
     * Company information data structure.
     */

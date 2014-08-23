@@ -11,7 +11,7 @@ var _:UnderscoreStatic = require('underscore');
 import Q = require('q');
 
 var moment = require('moment');
-var Invoice = require('../../../dist/invoice/node-business-rules.js');
+var Invoice:Invoice.BusinessRules = require('../../../dist/invoice/node-business-rules.js');
 
 
 describe('business rules for invoice', function () {
