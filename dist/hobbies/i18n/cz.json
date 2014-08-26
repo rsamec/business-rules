@@ -11,5 +11,13 @@
     "Name": "Název",
     "Frequency":"Četnost",
     "Paid":"Placená záliba",
-    "Recommendation":"Doporučení"
+    "Recommendation":"Doporučení",
+
+    "HobbiesCount":"Počet zálib",
+    "HobbiesCountMin":"Neostýchej se a napiš alespoň 2 záliby, které máš rád.",
+    "HobbiesCountMax":"Nepřeháněj. 4 záliby je až dost!",
+
+    "PaidLabel":"Je to placený koniček?",
+    "RecommendationLabel":"Doporučil by jsi tento koníček přátelům?"
+
 }
