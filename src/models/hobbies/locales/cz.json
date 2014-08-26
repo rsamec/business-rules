@@ -6,10 +6,10 @@
     "LastName": "Příjmení",
     "Email": "Email",
 
-    "Hobbies":"Hobbies",
+    "Hobbies":"Záliby a koníčky",
 
-    "Name": "Name",
-    "Frequency":"Frequency",
-    "Paid":"Paid",
-    "Recommendation":"Recommendation"
+    "Name": "Název",
+    "Frequency":"Četnost",
+    "Paid":"Placená záliba",
+    "Recommendation":"Doporučení"
 }

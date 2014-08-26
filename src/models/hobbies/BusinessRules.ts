@@ -61,7 +61,7 @@ module Hobbies {
             var validator = new Validation.AbstractValidator<IHobbiesData>();
 
             validator.ValidatorFor("Person",this.createPersonValidator());
-            validator.ValidatorFor("Hobbies",this.createItemValidator(),true);
+                validator.ValidatorFor("Hobbies",this.createItemValidator(),true);
 
             var hobbiesCountFce:Validation.IValidate = function(args:Validation.IError){
                 args.HasError = false;

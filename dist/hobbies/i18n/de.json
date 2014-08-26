@@ -1,15 +1,15 @@
 {
-    "Data": "Hobbies",
+    "Data": "Interesse",
 
     "Person":"Person",
     "FirstName": "Vorname",
     "LastName": "Nachname",
     "Email": "Email",
 
-    "Hobbies":"Hobbies",
+    "Hobbies":"Interesse und hobby",
 
     "Name": "Name",
-    "Frequency":"Frequency",
-    "Paid":"Paid",
-    "Recommendation":"Recommendation"
+    "Frequency":"Frequenz",
+    "Paid":"Bezahlen",
+    "Recommendation":"Empfehlung"
 }
