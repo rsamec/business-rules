@@ -77,13 +77,13 @@ var Hobbies;
                 if (this.Hobbies === undefined || this.Hobbies.length < 2) {
                     args.HasError = true;
                     args.ErrorMessage = "Come on, speak up. Tell us at least two things you enjoy doing";
-                    args.TranslateArgs = { TranslateId: 'MinHobbies', MessageArgs: this.Hobbies.length };
+                    args.TranslateArgs = { TranslateId: 'HobbiesCountMin', MessageArgs: this.Hobbies.length };
                     return;
                 }
                 if (this.Hobbies.length > 4) {
                     args.HasError = true;
                     args.ErrorMessage = "'Do not be greedy. Four hobbies are probably enough!'";
-                    args.TranslateArgs = { TranslateId: 'MaxHobbies', MessageArgs: this.Hobbies.length };
+                    args.TranslateArgs = { TranslateId: 'HobbiesCountMax', MessageArgs: this.Hobbies.length };
                     return;
                 }
             };
