@@ -29,7 +29,7 @@ module Hobbies {
         /**
          * Description of your hobby.
          */
-        Name:string;
+        HobbyName:string;
 
         /**
          * How often do you participate in this hobby.

@@ -119,7 +119,7 @@ var Hobbies;
             var validator = new Validation.AbstractValidator();
 
             var required = new Validators.RequiredValidator();
-            validator.RuleFor("Name", required);
+            validator.RuleFor("HobbyName", required);
 
             return validator;
         };

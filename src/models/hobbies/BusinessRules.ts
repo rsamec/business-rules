@@ -114,7 +114,7 @@ module Hobbies {
             var validator = new Validation.AbstractValidator<IHobby>();
 
             var required = new Validators.RequiredValidator();
-            validator.RuleFor("Name",required);
+            validator.RuleFor("HobbyName",required);
 
             return validator;
         }
