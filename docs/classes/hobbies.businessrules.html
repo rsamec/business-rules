@@ -35,11 +35,11 @@
     
     
     <li>
-        <a href="../modules/invoice.html">Invoice</a>
+        <a href="../modules/hobbies.html">Hobbies</a>
     </li>
 
     <li>
-        <a href="invoice.businessrules.html">BusinessRules</a>
+        <a href="hobbies.businessrules.html">BusinessRules</a>
     </li>
 
             </ul>
@@ -53,7 +53,7 @@
         <div class="col-8">
             
     
-    <p>Business rules for generic invoice.</p>
+    <p>Business rules for hobbies.</p>
 
 
 
@@ -72,7 +72,7 @@
             <h3>Constructor methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="invoice.businessrules.html#constructor" class="tsd-kind-icon">constructor</a></li>
+                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="hobbies.businessrules.html#constructor" class="tsd-kind-icon">constructor</a></li>
                 
             </ul>
         </section>
@@ -81,11 +81,13 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="invoice.businessrules.html#data" class="tsd-kind-icon">Data</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="hobbies.businessrules.html#data" class="tsd-kind-icon">Data</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="invoice.businessrules.html#invoicevalidator" class="tsd-kind-icon">InvoiceValidator</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="hobbies.businessrules.html#hobbiesnumbervalidator" class="tsd-kind-icon">HobbiesNumberValidator</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="invoice.businessrules.html#validationresult" class="tsd-kind-icon">ValidationResult</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="hobbies.businessrules.html#mainvalidator" class="tsd-kind-icon">MainValidator</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="hobbies.businessrules.html#validationresult" class="tsd-kind-icon">ValidationResult</a></li>
                 
             </ul>
         </section>
@@ -94,7 +96,7 @@
             <h3>Get accessors</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-get-accessor tsd-parent-kind-class"><a href="invoice.businessrules.html#name" class="tsd-kind-icon">Name</a></li>
+                    <li class="tsd-kind-get-accessor tsd-parent-kind-class"><a href="hobbies.businessrules.html#name" class="tsd-kind-icon">Name</a></li>
                 
             </ul>
         </section>
@@ -103,13 +105,13 @@
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="invoice.businessrules.html#validate" class="tsd-kind-icon">Validate</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="hobbies.businessrules.html#validate" class="tsd-kind-icon">Validate</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="invoice.businessrules.html#createinvoicevalidator" class="tsd-kind-icon">createInvoiceValidator</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="hobbies.businessrules.html#createitemvalidator" class="tsd-kind-icon">createItemValidator</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="invoice.businessrules.html#createitemvalidator" class="tsd-kind-icon">createItemValidator</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="hobbies.businessrules.html#createmainvalidator" class="tsd-kind-icon">createMainValidator</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="invoice.businessrules.html#createsubjectvalidator" class="tsd-kind-icon">createSubjectValidator</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="hobbies.businessrules.html#createpersonvalidator" class="tsd-kind-icon">createPersonValidator</a></li>
                 
             </ul>
         </section>
@@ -125,7 +127,7 @@
     <a name="constructor"></a>
     
         
-            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>Data<span class="tsd-signature-symbols">: </span><a href="../interfaces/invoice.iinvoicedata.html" class="tsd-signature-type">IInvoiceData</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="invoice.businessrules.html" class="tsd-signature-type">BusinessRules</a></h3>
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>Data<span class="tsd-signature-symbols">: </span><a href="../interfaces/hobbies.ihobbiesdata.html" class="tsd-signature-type">IHobbiesData</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="hobbies.businessrules.html" class="tsd-signature-type">BusinessRules</a></h3>
 
 <aside class="tsd-sources">
     
@@ -133,13 +135,13 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:36</li>
+                <li>Defined in hobbies/BusinessRules.ts:40</li>
             
         </ul>
     
 </aside>
 
-    <p>Default ctor.</p>
+    <p>Default constructor.</p>
 
 
 
@@ -152,11 +154,8 @@
     <ul>
         
             <li>
-                <h5>Data: <a href="../interfaces/invoice.iinvoicedata.html" class="tsd-signature-type">IInvoiceData</a></h5>
+                <h5>Data: <a href="../interfaces/hobbies.ihobbiesdata.html" class="tsd-signature-type">IHobbiesData</a></h5>
                 
-    <p>Invoice data</p>
-
-
 
 
 
@@ -170,7 +169,7 @@
     <h4>Returns</h4>
     <p>
     
-        <a href="invoice.businessrules.html" class="tsd-signature-type">BusinessRules</a>
+        <a href="hobbies.businessrules.html" class="tsd-signature-type">BusinessRules</a>
     
 </p>
     
@@ -194,7 +193,7 @@
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
     <a name="data"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> Data<span class="tsd-signature-symbols">:</span> <a href="../interfaces/invoice.iinvoicedata.html" class="tsd-signature-type">IInvoiceData</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> Data<span class="tsd-signature-symbols">:</span> <a href="../interfaces/hobbies.ihobbiesdata.html" class="tsd-signature-type">IHobbiesData</a></h3>
 
 <aside class="tsd-sources">
     
@@ -202,7 +201,7 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:36</li>
+                <li>Defined in hobbies/BusinessRules.ts:40</li>
             
         </ul>
     
@@ -220,9 +219,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="invoicevalidator"></a>
+    <a name="hobbiesnumbervalidator"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> InvoiceValidator<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> HobbiesNumberValidator<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
 
 <aside class="tsd-sources">
     
@@ -230,13 +229,44 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:24</li>
+                <li>Defined in hobbies/BusinessRules.ts:22</li>
             
         </ul>
     
 </aside>
 
-    <p>All business rules for invoice.</p>
+    <p>Hobbies number validator.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="mainvalidator"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> MainValidator<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in hobbies/BusinessRules.ts:28</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Hobbies main validator.</p>
 
 
 
@@ -261,13 +291,13 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:29</li>
+                <li>Defined in hobbies/BusinessRules.ts:33</li>
             
         </ul>
     
 </aside>
 
-    <p>Return all invoice errors.</p>
+    <p>Return all hobbies errors.</p>
 
 
 
@@ -300,7 +330,7 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:19</li>
+                <li>Defined in hobbies/BusinessRules.ts:17</li>
             
         </ul>
     
@@ -353,7 +383,7 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:47</li>
+                <li>Defined in hobbies/BusinessRules.ts:52</li>
             
         </ul>
     
@@ -388,53 +418,10 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="createinvoicevalidator"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> createInvoiceValidator<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Validation.IAbstractValidator&lt;Invoice.IInvoiceData&gt;</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in invoice/BusinessRules.ts:52</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-
-
-
-
-    <h4>Returns</h4>
-    <p>
-    
-        <span class="tsd-signature-type">Validation.IAbstractValidator&lt;Invoice.IInvoiceData&gt;</span>
-    
-</p>
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
     <a name="createitemvalidator"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> createItemValidator<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Validation.IAbstractValidator&lt;Invoice.IItem&gt;</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> createItemValidator<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Validation.IAbstractValidator&lt;Hobbies.IHobby&gt;</span></h3>
 
 <aside class="tsd-sources">
     
@@ -442,7 +429,7 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:91</li>
+                <li>Defined in hobbies/BusinessRules.ts:110</li>
             
         </ul>
     
@@ -459,7 +446,7 @@
     <h4>Returns</h4>
     <p>
     
-        <span class="tsd-signature-type">Validation.IAbstractValidator&lt;Invoice.IItem&gt;</span>
+        <span class="tsd-signature-type">Validation.IAbstractValidator&lt;Hobbies.IHobby&gt;</span>
     
 </p>
     
@@ -474,10 +461,10 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="createsubjectvalidator"></a>
+    <a name="createmainvalidator"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> createSubjectValidator<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Validation.IAbstractValidator&lt;Invoice.ISubject&gt;</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> createMainValidator<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Validation.IAbstractValidator&lt;Hobbies.IHobbiesData&gt;</span></h3>
 
 <aside class="tsd-sources">
     
@@ -485,7 +472,7 @@
     
         <ul>
             
-                <li>Defined in invoice/BusinessRules.ts:61</li>
+                <li>Defined in hobbies/BusinessRules.ts:57</li>
             
         </ul>
     
@@ -502,7 +489,50 @@
     <h4>Returns</h4>
     <p>
     
-        <span class="tsd-signature-type">Validation.IAbstractValidator&lt;Invoice.ISubject&gt;</span>
+        <span class="tsd-signature-type">Validation.IAbstractValidator&lt;Hobbies.IHobbiesData&gt;</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="createpersonvalidator"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> createPersonValidator<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Validation.IAbstractValidator&lt;Shared.IPerson&gt;</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in hobbies/BusinessRules.ts:87</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">Validation.IAbstractValidator&lt;Shared.IPerson&gt;</span>
     
 </p>
     
@@ -534,13 +564,8 @@
     
 </li>
                     
-                        <li class=" tsd-kind-container">
-    <a href="../modules/hobbies.html">Hobbies</a>
-    
-</li>
-                    
                         <li class="current tsd-kind-container">
-    <a href="../modules/invoice.html">Invoice</a>
+    <a href="../modules/hobbies.html">Hobbies</a>
     
         
             <ul>
@@ -553,12 +578,13 @@
                 
                     
                 
-                    
-                
-                    
-                
             </ul>
         
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/invoice.html">Invoice</a>
     
 </li>
                     
@@ -577,106 +603,99 @@
     <ul>
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/invoice.iapproval.html" class="tsd-kind-icon">IApproval</a>
+                <li class=" tsd-kind-enum tsd-parent-kind-container">
+                    <a href="../enums/hobbies.hobbyfrequency.html" class="tsd-kind-icon">HobbyFrequency</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/invoice.iinvoicedata.html" class="tsd-kind-icon">IInvoiceData</a>
+                    <a href="../interfaces/hobbies.ihobbiesdata.html" class="tsd-kind-icon">IHobbiesData</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/invoice.iitem.html" class="tsd-kind-icon">IItem</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/invoice.ipaymentterms.html" class="tsd-kind-icon">IPaymentTerms</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/invoice.isubject.html" class="tsd-kind-icon">ISubject</a>
+                    <a href="../interfaces/hobbies.ihobby.html" class="tsd-kind-icon">IHobby</a>
                     
                 </li>
             
         
             
                 <li class="current tsd-kind-class tsd-parent-kind-container">
-                    <a href="invoice.businessrules.html" class="tsd-kind-icon">BusinessRules</a>
+                    <a href="hobbies.businessrules.html" class="tsd-kind-icon">BusinessRules</a>
                     
 
     <ul>
         
             
                 <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
-                    <a href="invoice.businessrules.html#constructor" class="tsd-kind-icon">constructor</a>
+                    <a href="hobbies.businessrules.html#constructor" class="tsd-kind-icon">constructor</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="invoice.businessrules.html#data" class="tsd-kind-icon">Data</a>
+                    <a href="hobbies.businessrules.html#data" class="tsd-kind-icon">Data</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="invoice.businessrules.html#invoicevalidator" class="tsd-kind-icon">InvoiceValidator</a>
+                    <a href="hobbies.businessrules.html#hobbiesnumbervalidator" class="tsd-kind-icon">HobbiesNumberValidator</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="invoice.businessrules.html#validationresult" class="tsd-kind-icon">ValidationResult</a>
+                    <a href="hobbies.businessrules.html#mainvalidator" class="tsd-kind-icon">MainValidator</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="hobbies.businessrules.html#validationresult" class="tsd-kind-icon">ValidationResult</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-get-accessor tsd-parent-kind-class">
-                    <a href="invoice.businessrules.html#name" class="tsd-kind-icon">Name</a>
+                    <a href="hobbies.businessrules.html#name" class="tsd-kind-icon">Name</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="invoice.businessrules.html#validate" class="tsd-kind-icon">Validate</a>
+                    <a href="hobbies.businessrules.html#validate" class="tsd-kind-icon">Validate</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="invoice.businessrules.html#createinvoicevalidator" class="tsd-kind-icon">createInvoiceValidator</a>
+                    <a href="hobbies.businessrules.html#createitemvalidator" class="tsd-kind-icon">createItemValidator</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="invoice.businessrules.html#createitemvalidator" class="tsd-kind-icon">createItemValidator</a>
+                    <a href="hobbies.businessrules.html#createmainvalidator" class="tsd-kind-icon">createMainValidator</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="invoice.businessrules.html#createsubjectvalidator" class="tsd-kind-icon">createSubjectValidator</a>
+                    <a href="hobbies.businessrules.html#createpersonvalidator" class="tsd-kind-icon">createPersonValidator</a>
                     
                 </li>
             

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IContact | Business rules</title>
+    <title>IBusinessRules | Business rules</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,11 +39,11 @@
     </li>
 
     <li>
-        <a href="shared.icontact.html">IContact</a>
+        <a href="shared.ibusinessrules.html">IBusinessRules</a>
     </li>
 
             </ul>
-            <h1>Interface IContact</h1>
+            <h1>Interface IBusinessRules</h1>
         </div>
     </div>
 </header>
@@ -69,11 +69,18 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#email" class="tsd-kind-icon">Email</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.ibusinessrules.html#name" class="tsd-kind-icon">Name</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#mobile" class="tsd-kind-icon">Mobile</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.ibusinessrules.html#validationresult" class="tsd-kind-icon">ValidationResult</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#workphone" class="tsd-kind-icon">WorkPhone</a></li>
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="shared.ibusinessrules.html#validate" class="tsd-kind-icon">Validate</a></li>
                 
             </ul>
         </section>
@@ -86,9 +93,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="email"></a>
+    <a name="name"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Email<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">string</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> Name<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
 <aside class="tsd-sources">
     
@@ -96,14 +103,11 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:76</li>
+                <li>Defined in shared/BusinessRules.ts:8</li>
             
         </ul>
     
 </aside>
-
-    <p>Email address.</p>
-
 
 
 
@@ -117,9 +121,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="mobile"></a>
+    <a name="validationresult"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Mobile<span class="tsd-signature-symbols">?:</span> <a href="shared.iphone.html" class="tsd-signature-type">IPhone</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> ValidationResult<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Validation.IValidationResult</span></h3>
 
 <aside class="tsd-sources">
     
@@ -127,14 +131,11 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:86</li>
+                <li>Defined in shared/BusinessRules.ts:6</li>
             
         </ul>
     
 </aside>
-
-    <p>Mobile phone</p>
-
 
 
 
@@ -146,11 +147,19 @@
 </section>
         
     
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="workphone"></a>
+</section>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> WorkPhone<span class="tsd-signature-symbols">?:</span> <a href="shared.iphone.html" class="tsd-signature-type">IPhone</a></h3>
+
+    
+        <section class="tsd-member-group ">
+    <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-interface">
+    <a name="validate"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> Validate<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Q.Promise&lt;Validation.IValidationResult&gt;</span></h3>
 
 <aside class="tsd-sources">
     
@@ -158,19 +167,30 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:81</li>
+                <li>Defined in shared/BusinessRules.ts:7</li>
             
         </ul>
     
 </aside>
 
-    <p>Work phone.</p>
 
 
 
 
 
 
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">Q.Promise&lt;Validation.IValidationResult&gt;</span>
+    
+</p>
+    
+
+
+        
     
 
     
@@ -246,9 +266,36 @@
             
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                <li class="current tsd-kind-interface tsd-parent-kind-container">
                     <a href="shared.ibusinessrules.html" class="tsd-kind-icon">IBusinessRules</a>
                     
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+                    <a href="shared.ibusinessrules.html#name" class="tsd-kind-icon">Name</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+                    <a href="shared.ibusinessrules.html#validationresult" class="tsd-kind-icon">ValidationResult</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+                    <a href="shared.ibusinessrules.html#validate" class="tsd-kind-icon">Validate</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
                 </li>
             
         
@@ -260,36 +307,9 @@
             
         
             
-                <li class="current tsd-kind-interface tsd-parent-kind-container">
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
                     <a href="shared.icontact.html" class="tsd-kind-icon">IContact</a>
                     
-
-    <ul>
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#email" class="tsd-kind-icon">Email</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#mobile" class="tsd-kind-icon">Mobile</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#workphone" class="tsd-kind-icon">WorkPhone</a>
-                    
-                </li>
-            
-        
-    </ul>
-
-
                 </li>
             
         

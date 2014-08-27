@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IContact | Business rules</title>
+    <title>IHobby | Business rules</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,15 +35,15 @@
     
     
     <li>
-        <a href="../modules/shared.html">Shared</a>
+        <a href="../modules/hobbies.html">Hobbies</a>
     </li>
 
     <li>
-        <a href="shared.icontact.html">IContact</a>
+        <a href="hobbies.ihobby.html">IHobby</a>
     </li>
 
             </ul>
-            <h1>Interface IContact</h1>
+            <h1>Interface IHobby</h1>
         </div>
     </div>
 </header>
@@ -53,6 +53,9 @@
         <div class="col-8">
             
     
+    <p>The things you enjoy doing.</p>
+
+
 
 
 
@@ -69,11 +72,13 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#email" class="tsd-kind-icon">Email</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="hobbies.ihobby.html#frequency" class="tsd-kind-icon">Frequency</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#mobile" class="tsd-kind-icon">Mobile</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="hobbies.ihobby.html#hobbyname" class="tsd-kind-icon">HobbyName</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#workphone" class="tsd-kind-icon">WorkPhone</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="hobbies.ihobby.html#paid" class="tsd-kind-icon">Paid</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="hobbies.ihobby.html#recommedation" class="tsd-kind-icon">Recommedation</a></li>
                 
             </ul>
         </section>
@@ -86,9 +91,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="email"></a>
+    <a name="frequency"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Email<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">string</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Frequency<span class="tsd-signature-symbols">?:</span> <a href="../enums/hobbies.hobbyfrequency.html" class="tsd-signature-type">HobbyFrequency</a></h3>
 
 <aside class="tsd-sources">
     
@@ -96,13 +101,13 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:76</li>
+                <li>Defined in hobbies/Data.ts:36</li>
             
         </ul>
     
 </aside>
 
-    <p>Email address.</p>
+    <p>How often do you participate in this hobby.</p>
 
 
 
@@ -117,9 +122,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="mobile"></a>
+    <a name="hobbyname"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Mobile<span class="tsd-signature-symbols">?:</span> <a href="shared.iphone.html" class="tsd-signature-type">IPhone</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> HobbyName<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">string</span></h3>
 
 <aside class="tsd-sources">
     
@@ -127,13 +132,13 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:86</li>
+                <li>Defined in hobbies/Data.ts:31</li>
             
         </ul>
     
 </aside>
 
-    <p>Mobile phone</p>
+    <p>Description of your hobby.</p>
 
 
 
@@ -148,9 +153,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="workphone"></a>
+    <a name="paid"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> WorkPhone<span class="tsd-signature-symbols">?:</span> <a href="shared.iphone.html" class="tsd-signature-type">IPhone</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Paid<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -158,13 +163,44 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:81</li>
+                <li>Defined in hobbies/Data.ts:41</li>
             
         </ul>
     
 </aside>
 
-    <p>Work phone.</p>
+    <p>Return true if this is a paid hobby, otherwise false.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
+    <a name="recommedation"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Recommedation<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in hobbies/Data.ts:47</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Return true if you would recommend this hobby to a friend, otherwise false.</p>
 
 
 
@@ -191,8 +227,13 @@
     
 </li>
                     
-                        <li class="current tsd-kind-container">
+                        <li class=" tsd-kind-container">
     <a href="../modules/shared.html">Shared</a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container">
+    <a href="../modules/hobbies.html">Hobbies</a>
     
         
             <ul>
@@ -205,17 +246,8 @@
                 
                     
                 
-                    
-                
-                    
-                
             </ul>
         
-    
-</li>
-                    
-                        <li class=" tsd-kind-container">
-    <a href="../modules/hobbies.html">Hobbies</a>
     
 </li>
                     
@@ -239,50 +271,50 @@
     <ul>
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.iaddress.html" class="tsd-kind-icon">IAddress</a>
+                <li class=" tsd-kind-enum tsd-parent-kind-container">
+                    <a href="../enums/hobbies.hobbyfrequency.html" class="tsd-kind-icon">HobbyFrequency</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.ibusinessrules.html" class="tsd-kind-icon">IBusinessRules</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.icompany.html" class="tsd-kind-icon">ICompany</a>
+                    <a href="hobbies.ihobbiesdata.html" class="tsd-kind-icon">IHobbiesData</a>
                     
                 </li>
             
         
             
                 <li class="current tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.icontact.html" class="tsd-kind-icon">IContact</a>
+                    <a href="hobbies.ihobby.html" class="tsd-kind-icon">IHobby</a>
                     
 
     <ul>
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#email" class="tsd-kind-icon">Email</a>
+                    <a href="hobbies.ihobby.html#frequency" class="tsd-kind-icon">Frequency</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#mobile" class="tsd-kind-icon">Mobile</a>
+                    <a href="hobbies.ihobby.html#hobbyname" class="tsd-kind-icon">HobbyName</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#workphone" class="tsd-kind-icon">WorkPhone</a>
+                    <a href="hobbies.ihobby.html#paid" class="tsd-kind-icon">Paid</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+                    <a href="hobbies.ihobby.html#recommedation" class="tsd-kind-icon">Recommedation</a>
                     
                 </li>
             
@@ -294,15 +326,8 @@
             
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.iperson.html" class="tsd-kind-icon">IPerson</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.iphone.html" class="tsd-kind-icon">IPhone</a>
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="../classes/hobbies.businessrules.html" class="tsd-kind-icon">BusinessRules</a>
                     
                 </li>
             

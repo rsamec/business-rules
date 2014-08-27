@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IContact | Business rules</title>
+    <title>HobbyFrequency | Business rules</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,15 +35,15 @@
     
     
     <li>
-        <a href="../modules/shared.html">Shared</a>
+        <a href="../modules/hobbies.html">Hobbies</a>
     </li>
 
     <li>
-        <a href="shared.icontact.html">IContact</a>
+        <a href="hobbies.hobbyfrequency.html">HobbyFrequency</a>
     </li>
 
             </ul>
-            <h1>Interface IContact</h1>
+            <h1>Enumeration HobbyFrequency</h1>
         </div>
     </div>
 </header>
@@ -53,6 +53,9 @@
         <div class="col-8">
             
     
+    <p>How often do you participate in this hobby.</p>
+
+
 
 
 
@@ -66,14 +69,14 @@
     <h2>Index</h2>
     
         <section class="tsd-member-index-group ">
-            <h3>Properties</h3>
+            <h3>Enumeration members</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#email" class="tsd-kind-icon">Email</a></li>
+                    <li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="hobbies.hobbyfrequency.html#daily" class="tsd-kind-icon">Daily</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#mobile" class="tsd-kind-icon">Mobile</a></li>
+                    <li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="hobbies.hobbyfrequency.html#monthly" class="tsd-kind-icon">Monthly</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="shared.icontact.html#workphone" class="tsd-kind-icon">WorkPhone</a></li>
+                    <li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="hobbies.hobbyfrequency.html#weekly" class="tsd-kind-icon">Weekly</a></li>
                 
             </ul>
         </section>
@@ -82,13 +85,13 @@
     
     
         <section class="tsd-member-group ">
-    <h2>Properties</h2>
+    <h2>Enumeration members</h2>
     
         
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="email"></a>
+            <section class="tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+    <a name="daily"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Email<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">string</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> Daily<span class="tsd-signature-symbols">:</span> <a href="hobbies.hobbyfrequency.html" class="tsd-signature-type">HobbyFrequency</a></h3>
 
 <aside class="tsd-sources">
     
@@ -96,14 +99,11 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:76</li>
+                <li>Defined in hobbies/Data.ts:55</li>
             
         </ul>
     
 </aside>
-
-    <p>Email address.</p>
-
 
 
 
@@ -116,10 +116,10 @@
         
     
         
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="mobile"></a>
+            <section class="tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+    <a name="monthly"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> Mobile<span class="tsd-signature-symbols">?:</span> <a href="shared.iphone.html" class="tsd-signature-type">IPhone</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> Monthly<span class="tsd-signature-symbols">:</span> <a href="hobbies.hobbyfrequency.html" class="tsd-signature-type">HobbyFrequency</a></h3>
 
 <aside class="tsd-sources">
     
@@ -127,14 +127,11 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:86</li>
+                <li>Defined in hobbies/Data.ts:55</li>
             
         </ul>
     
 </aside>
-
-    <p>Mobile phone</p>
-
 
 
 
@@ -147,10 +144,10 @@
         
     
         
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="workphone"></a>
+            <section class="tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+    <a name="weekly"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> WorkPhone<span class="tsd-signature-symbols">?:</span> <a href="shared.iphone.html" class="tsd-signature-type">IPhone</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> Weekly<span class="tsd-signature-symbols">:</span> <a href="hobbies.hobbyfrequency.html" class="tsd-signature-type">HobbyFrequency</a></h3>
 
 <aside class="tsd-sources">
     
@@ -158,14 +155,11 @@
     
         <ul>
             
-                <li>Defined in shared/Data.ts:81</li>
+                <li>Defined in hobbies/Data.ts:55</li>
             
         </ul>
     
 </aside>
-
-    <p>Work phone.</p>
-
 
 
 
@@ -191,8 +185,13 @@
     
 </li>
                     
-                        <li class="current tsd-kind-container">
+                        <li class=" tsd-kind-container">
     <a href="../modules/shared.html">Shared</a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container">
+    <a href="../modules/hobbies.html">Hobbies</a>
     
         
             <ul>
@@ -205,17 +204,8 @@
                 
                     
                 
-                    
-                
-                    
-                
             </ul>
         
-    
-</li>
-                    
-                        <li class=" tsd-kind-container">
-    <a href="../modules/hobbies.html">Hobbies</a>
     
 </li>
                     
@@ -239,50 +229,29 @@
     <ul>
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.iaddress.html" class="tsd-kind-icon">IAddress</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.ibusinessrules.html" class="tsd-kind-icon">IBusinessRules</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.icompany.html" class="tsd-kind-icon">ICompany</a>
-                    
-                </li>
-            
-        
-            
-                <li class="current tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.icontact.html" class="tsd-kind-icon">IContact</a>
+                <li class="current tsd-kind-enum tsd-parent-kind-container">
+                    <a href="hobbies.hobbyfrequency.html" class="tsd-kind-icon">HobbyFrequency</a>
                     
 
     <ul>
         
             
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#email" class="tsd-kind-icon">Email</a>
+                <li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+                    <a href="hobbies.hobbyfrequency.html#daily" class="tsd-kind-icon">Daily</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#mobile" class="tsd-kind-icon">Mobile</a>
+                <li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+                    <a href="hobbies.hobbyfrequency.html#monthly" class="tsd-kind-icon">Monthly</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="shared.icontact.html#workphone" class="tsd-kind-icon">WorkPhone</a>
+                <li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+                    <a href="hobbies.hobbyfrequency.html#weekly" class="tsd-kind-icon">Weekly</a>
                     
                 </li>
             
@@ -295,14 +264,21 @@
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.iperson.html" class="tsd-kind-icon">IPerson</a>
+                    <a href="../interfaces/hobbies.ihobbiesdata.html" class="tsd-kind-icon">IHobbiesData</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="shared.iphone.html" class="tsd-kind-icon">IPhone</a>
+                    <a href="../interfaces/hobbies.ihobby.html" class="tsd-kind-icon">IHobby</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="../classes/hobbies.businessrules.html" class="tsd-kind-icon">BusinessRules</a>
                     
                 </li>
             
