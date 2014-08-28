@@ -1,0 +1,30 @@
+{
+  "name": "br-hobbies",
+  "version": "1.0.1",
+  "description": "Hobbies business rules",
+  "main": "node-business-rules.js",
+  "dependencies": {
+    "moment": "^2.7.0",
+    "q": "^1.0.1",
+    "underscore": "^1.6.0",
+    "business-rules-engine": "^1.0.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsamec/business-rules"
+  },
+  "keywords": [
+    "business",
+    "rules",
+    "validation"
+  ],
+  "author": "rsamec",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsamec/business-rules/issues"
+  },
+  "homepage": "https://github.com/rsamec/business-rules"
+}
