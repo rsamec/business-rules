@@ -17,31 +17,23 @@ Business rules for hobbies.
 ## Basic usage
 
 ```typescript
-import moment = require('moment');
-import _ = require('underscore');
-import Validation = require('business-rules-engine');
-import VacationApproval = require('./models/vacationApproval/node-business-rules.js');
+
+var Hobbies = require('br-hobbies');
 
 //create test data
-var data:VacationApproval.IVacationApprovalData = {
-                Employee: {
-                    FirstName: 'John',
-                    LastName: 'Smith toooooooooooooooooooooooooo long'
-                },
-                Deputy1: {
-                    Checked:true,
-                    FirstName: 'Paul',
-                    LastName: 'Neuman',
-                    Email: 'pneuman@gmai.com'
-                },
-                Duration: {
-                    From: new Date(),
-                    To: moment(new Date()).add('days', 1).toDate()
-                }
-            };
+    var data = {
+        Person:{
+            FirstName: 'John',
+            LastName: 'Smith',
+            Email: "joht.smith@gmail.com"
+        },
+        Hobbies:[
+            {HobbyName:"English", Frequency:Hobbies.HobbyFrequency.Weekly , Paid:true,Recommendation:true},
+            {HobbyName:"Swimming", Frequency:Hobbies.HobbyFrequency.Monthly , Paid:false,Recommendation:true}
+        ]
+    };
 
-
-//business rules for vacation approval
+//business rules
 var businessRules = new VacationApproval.BusinessRules(data);
 
 //execute validation
@@ -51,10 +43,6 @@ businessRules.Validate();
 if (businessRules.Errors.HasErrors) console.log(businessRules.Errors.ErrorMessage);
 ```
 
-Output
-```bash
-Please enter no more than 15 characters.
-```
 
 ## Tests
 

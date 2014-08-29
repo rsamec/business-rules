@@ -141,7 +141,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
 
 
-    grunt.registerTask('test', ['typescript:test', 'mochacli', 'watch']);
+    grunt.registerTask('test', ['mochacli', 'watch']);
     grunt.registerTask('ci', ['complexity', 'jshint', 'mochacli']);
     grunt.registerTask('default', ['test']);
     grunt.registerTask('document', ['typedoc']);
