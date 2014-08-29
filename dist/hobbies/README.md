@@ -34,7 +34,7 @@ var Hobbies = require('br-hobbies');
     };
 
 //business rules
-var businessRules = new VacationApproval.BusinessRules(data);
+var businessRules = new Hobbies.BusinessRules(data);
 
 //execute validation
 businessRules.Validate();
