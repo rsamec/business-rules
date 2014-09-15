@@ -1,0 +1,165 @@
+///<reference path='../../../typings/mocha/mocha.d.ts'/>
+///<reference path='../../../typings/node/node.d.ts'/>
+///<reference path='../../../typings/underscore/underscore.d.ts'/>
+///<reference path='../../../typings/q/q.d.ts'/>
+///<reference path='../../../typings/business-rules-engine/business-rules-engine.d.ts'/>
+///<reference path='../../../dist/hobbies/business-rules.d.ts'/>
+
+var Validation = require('business-rules-engine');
+var FormSchema = require('business-rules-engine/commonjs/FormSchema');
+var expect = require('expect.js');
+var _:UnderscoreStatic = require('underscore');
+import Q = require('q');
+
+var moment = require('moment');
+
+describe('schema for hobbies', function () {
+    //create test data
+    var data:Hobbies.IHobbiesData;
+
+    var businessRules: any;
+
+    //business rules for hobbies
+    var hobbiesSchema = {
+        "Person": {
+            "type": "object",
+            "properties": {
+                "Checked": { "type": "boolean", "title": "Checked", "default": true },
+                "FirstName": { "type": "string", "title": "First name", "required": "true", "maxLength": "15" },
+                "LastName": { "type": "string", "title": "Last name", "required": "true", "maxLength": "15"},
+                "Contact:": { "type": "object",
+                    "properties": {
+                        "Email": { "type": "string", "title": "Email",
+                            "required": "true",
+                            "maxLength": "100",
+                            "pattern": "S*@S*"
+                        }
+                    }
+                }
+            }
+        },
+        "Hobbies": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "HobbyName": { "type": "string", "title": "HobbyName", "required": "true", "maxLength": "100"},
+                    "Frequency": { "type": "string", "title": "Frequency", "enum": ["Daily", "Weekly", "Monthly"]},
+                    "Paid": { "type": "boolean", "title": "Paid"},
+                    "Recommedation": { "type": "boolean", "title": "Recommedation"}
+                }
+            },
+            "maxItems": "4",
+            "minItems": "2"
+        }
+    };
+
+
+    beforeEach(function () {
+        //setup
+        data = FormSchema.Util.GetFormValues(hobbiesSchema);
+        businessRules = FormSchema.Util.GetAbstractRule(hobbiesSchema).CreateRule("Main");
+    });
+
+    describe('hobbies', function () {
+
+        describe('first name + last name', function () {
+
+            it('fill no names', function () {
+                //when
+
+                //exec
+                businessRules.Validate(data);
+
+                //verify
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["FirstName"].HasErrors).to.equal(true);
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["LastName"].HasErrors).to.equal(true);
+            });
+
+            it('fill empty names', function () {
+                //when
+                data.Person = {
+                    FirstName: '',
+                    LastName: ''
+                };
+                //exec
+                businessRules.Validate(data);
+
+                //verify
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["FirstName"].HasErrors).to.equal(true);
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["LastName"].HasErrors).to.equal(true);
+            });
+
+            it('fill long names', function () {
+                //when
+                data.Person = {
+                    FirstName: 'too looooooooooooong first name',
+                    LastName: 'too looooooooooooong last name'
+                };
+
+                //exec
+                businessRules.Validate(data);
+
+                //verify
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["FirstName"].HasErrors).to.equal(true);
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["LastName"].HasErrors).to.equal(true);
+            });
+
+            it('fill some names', function () {
+                //when
+                data.Person = {
+                    FirstName: 'John',
+                    LastName: 'Smith'
+                };
+
+                //exec
+                businessRules.Validate(data);
+
+                //verify
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["FirstName"].HasErrors).to.equal(false);
+                expect(businessRules.ValidationResult.Errors["Person"].Errors["LastName"].HasErrors).to.equal(false);
+            });
+        });
+
+        describe('items', function () {
+
+            it('fill no item', function () {
+                //when
+                data.Hobbies = [];
+
+                //exec
+                businessRules.Validate(data);
+
+                //verify
+                expect(businessRules.ValidationResult.Errors["Hobbies"].HasErrors).to.equal(true);
+            });
+
+            it('fill two items', function () {
+                //when
+                data.Hobbies = [
+                    {HobbyName:"Skiing"}, {HobbyName:'Chess'}
+                ]
+
+                //exec
+                businessRules.Validate(data);
+
+                //verify
+                expect(businessRules.ValidationResult.Errors["Hobbies"].HasErrors).to.equal(false)
+            });
+
+            it('fill five items', function () {
+                //when
+                data.Hobbies = [
+                    {HobbyName:"Skiing"}, {HobbyName:'Chess'}, {HobbyName:"Skiing 2"}, {HobbyName:'Chess 2'}, {HobbyName:"Skiing 3"}
+                ]
+
+                //exec
+                businessRules.Validate(data);
+
+                //verify
+                expect(businessRules.ValidationResult.Errors["Hobbies"].HasErrors).to.equal(true)
+            });
+
+        });
+    });
+});
