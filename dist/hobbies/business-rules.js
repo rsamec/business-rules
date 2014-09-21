@@ -42,7 +42,7 @@ var Hobbies;
             this.MainValidator = this.createMainValidator().CreateRule("Data");
 
             this.ValidationResult = this.MainValidator.ValidationResult;
-            this.HobbiesNumberValidator = this.MainValidator.Validators["HobbiesCount"];
+            this.HobbiesNumberValidator = this.MainValidator.Validators["Hobbies"];
         }
         Object.defineProperty(BusinessRules.prototype, "Name", {
             /**
@@ -50,6 +50,14 @@ var Hobbies;
             */
             get: function () {
                 return "hobbies";
+            },
+            enumerable: true,
+            configurable: true
+        });
+
+        Object.defineProperty(BusinessRules.prototype, "MainAbstractRule", {
+            get: function () {
+                return this.createMainValidator();
             },
             enumerable: true,
             configurable: true
@@ -88,7 +96,7 @@ var Hobbies;
                 }
             };
 
-            validator.Validation({ Name: "HobbiesCount", ValidationFce: hobbiesCountFce });
+            validator.Validation({ Name: "Hobbies", ValidationFce: hobbiesCountFce });
 
             return validator;
         };
@@ -98,9 +106,7 @@ var Hobbies;
 
             //create validators
             var required = new Validators.RequiredValidator();
-            var email = new Validators.EmailValidator();
-            var maxLength = new Validators.MaxLengthValidator();
-            maxLength.MaxLength = 15;
+            var maxLength = new Validators.MaxLengthValidator(15);
 
             //assign validators to properties
             personValidator.RuleFor("FirstName", required);
@@ -109,18 +115,22 @@ var Hobbies;
             personValidator.RuleFor("LastName", required);
             personValidator.RuleFor("LastName", maxLength);
 
-            personValidator.RuleFor("Email", required);
-            personValidator.RuleFor("Email", email);
+            personValidator.ValidatorFor("Contact", this.createContactValidator());
 
             return personValidator;
+        };
+        BusinessRules.prototype.createContactValidator = function () {
+            //create custom validator
+            var validator = new Validation.AbstractValidator();
+            validator.RuleFor("Email", new Validators.RequiredValidator());
+            validator.RuleFor("Email", new Validators.MaxLengthValidator(100));
+            validator.RuleFor("Email", new Validators.EmailValidator());
+            return validator;
         };
         BusinessRules.prototype.createItemValidator = function () {
             //create custom validator
             var validator = new Validation.AbstractValidator();
-
-            var required = new Validators.RequiredValidator();
-            validator.RuleFor("HobbyName", required);
-
+            validator.RuleFor("HobbyName", new Validators.RequiredValidator());
             return validator;
         };
         return BusinessRules;

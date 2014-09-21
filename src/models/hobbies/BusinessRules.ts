@@ -12,6 +12,7 @@ module Hobbies {
      **/
     export class BusinessRules implements Shared.IBusinessRules{
 
+
         /**
          * Business rules name
          */
@@ -43,9 +44,9 @@ module Hobbies {
             this.MainValidator = this.createMainValidator().CreateRule("Data");
 
             this.ValidationResult = this.MainValidator.ValidationResult;
-            this.HobbiesNumberValidator = this.MainValidator.Validators["HobbiesCount"];
+            this.HobbiesNumberValidator = this.MainValidator.Validators["Hobbies"];
         }
-
+        public get MainAbstractRule(){return this.createMainValidator();}
 
         /**
          * Executes all business rules.
@@ -81,7 +82,7 @@ module Hobbies {
                 }
             };
 
-            validator.Validation({Name:"HobbiesCount",ValidationFce:hobbiesCountFce});
+            validator.Validation({Name:"Hobbies",ValidationFce:hobbiesCountFce});
 
             return validator;
         }
@@ -92,9 +93,7 @@ module Hobbies {
 
             //create validators
             var required = new Validators.RequiredValidator();
-            var email = new Validators.EmailValidator();
-            var maxLength = new Validators.MaxLengthValidator();
-            maxLength.MaxLength = 15;
+            var maxLength = new Validators.MaxLengthValidator(15);
 
             //assign validators to properties
             personValidator.RuleFor("FirstName", required);
@@ -103,19 +102,24 @@ module Hobbies {
             personValidator.RuleFor("LastName", required);
             personValidator.RuleFor("LastName", maxLength);
 
-            personValidator.RuleFor("Email", required);
-            personValidator.RuleFor("Email", email);
+            personValidator.ValidatorFor("Contact",this.createContactValidator());
 
             return personValidator;
+        }
+        private createContactValidator():Validation.IAbstractValidator<Shared.IContact> {
+
+            //create custom validator
+            var validator = new Validation.AbstractValidator<Shared.IContact>();
+            validator.RuleFor("Email",new Validators.RequiredValidator());
+            validator.RuleFor("Email", new Validators.MaxLengthValidator(100));
+            validator.RuleFor("Email", new Validators.EmailValidator());
+            return validator;
         }
         private createItemValidator():Validation.IAbstractValidator<IHobby> {
 
             //create custom validator
             var validator = new Validation.AbstractValidator<IHobby>();
-
-            var required = new Validators.RequiredValidator();
-            validator.RuleFor("HobbyName",required);
-
+            validator.RuleFor("HobbyName",new Validators.RequiredValidator());
             return validator;
         }
     }

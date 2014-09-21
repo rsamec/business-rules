@@ -11,16 +11,16 @@ var expect = require('expect.js');
 var _:UnderscoreStatic = require('underscore');
 import Q = require('q');
 
-
+var Hobbies = require('../../../dist/hobbies/node-business-rules.js');
 //create test data
 
-var sharedHobbiesTest = function(jsonMetaData,jsonSchema) {
+var sharedHobbiesTest = function(abstractValidator) {
     var data;
     var businessRules;
     beforeEach(function () {
         //setup
         data = {};
-        businessRules = jsonSchema? new FormSchema.JsonSchemaRuleFactory(jsonMetaData).CreateRule("Main"):new FormSchema.JQueryValidationRuleFactory(jsonMetaData).CreateRule("Main");
+        businessRules = abstractValidator.CreateRule("Main");
     });
     describe('hobbies', function () {
 
@@ -175,13 +175,18 @@ var sharedHobbiesTest = function(jsonMetaData,jsonSchema) {
     });
 }
 
+describe('API', function () {
+
+    sharedHobbiesTest(new Hobbies.BusinessRules({}).MainAbstractRule);
+
+});
+
 describe('JSON schema validation for hobbies', function () {
 
     var hobbiesSchema = {
         Person: {
             type: "object",
             properties: {
-                Checked: { type: "boolean", title: "Checked", default: true },
                 FirstName: { type: "string", title: "First name", required: true, maxLength: 15 },
                 LastName: { type: "string", title: "Last name", required: true, maxLength: 15 },
                 Contact: {
@@ -213,7 +218,7 @@ describe('JSON schema validation for hobbies', function () {
         }
     };
 
-    sharedHobbiesTest(hobbiesSchema,true);
+    sharedHobbiesTest(new FormSchema.JsonSchemaRuleFactory(hobbiesSchema));
 
 });
 
@@ -250,6 +255,6 @@ describe('raw data JSON annotated with meta data rules', function () {
         ]
     };
 
-    sharedHobbiesTest(hobbiesSchema,false);
+    sharedHobbiesTest(new FormSchema.JQueryValidationRuleFactory(hobbiesSchema));
 
 });

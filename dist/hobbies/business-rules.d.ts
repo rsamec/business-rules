@@ -154,12 +154,14 @@ declare module Hobbies {
         * @param data
         */
         constructor(Data: IHobbiesData);
+        public MainAbstractRule : Validation.IAbstractValidator<IHobbiesData>;
         /**
         * Executes all business rules.
         */
         public Validate(): Q.Promise<Validation.IValidationResult>;
         private createMainValidator();
         private createPersonValidator();
+        private createContactValidator();
         private createItemValidator();
     }
 }
